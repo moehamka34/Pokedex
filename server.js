@@ -1,11 +1,12 @@
 const express = require('express');
 const methodOverride = require("method-override");
-const pokemon = require('./models/pokemon.js');
+const pokemon = require('./models/pokemon');
 const app = express();
 const Pokemon = require('./models/pokemon.js');
 const port= 3000;
 // middleware
 app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: false }));
 
 
 // INDEX
@@ -35,6 +36,7 @@ app.put("/pokemon/:id", (req, res) => {
     
     
     pokemon[req.params.id] = req.body 
+    console.log(req.body)
     res.redirect("/pokemon") 
   })
 
