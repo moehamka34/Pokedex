@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pokemon</h1>
+    <h2><%= data.name %></h2>
+    <% let code = '.jpg' %>
+    <img src="<%= data.img  %>" alt="photo-here">
+    <h3>Type: <%= data.type %></h3>
+    <h3>Stats:</h3>
+    <h4> HP: <%= data.stats.hp %></h4>
+    <h4> ATTACK: <%= data.stats.attack %></h4>
+    <h4> DEFENSE: <%= data.stats.defense %></h4>
+    <h4> SPECIAL ATTACK: <%= data.stats.spattack %></h4>
+    <h4> SPECIAL DEFENSE: <%= data.stats.spdefense %></h4>
+    <h4> SPEED: <%= data.stats.speed %></h4>
+</body>
+</html>
