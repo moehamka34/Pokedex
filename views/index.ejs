@@ -7,6 +7,20 @@
     <title>Pokemon data</title>
 </head>
 <body>
+<style>
+    body{
+        display: flex; 
+        flex-wrap: wrap;
+        align-content: center;
+        background-color: rgb(249, 132, 108);
+    }
+    h1 {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+</style>
+   
     <h1> PokeDex </h1>
     <nav>
         <a href="/pokemon/new">Create a New Pokemon</a>
@@ -17,9 +31,9 @@
               <a href="/pokemon/<%= i %>">
               <%= data[i].name %>
               </a>
-             <img src="<%= data[i].img %>""
+             <img src="<%= data[i].img %>"">
 
-             <form action="/fruits/<%=i; %>?_method=DELETE" method="POST">
+             <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
               </form>
           </li> 
@@ -28,9 +42,6 @@
       
       <% } %>
       </ul>
-    <style>
     
-        
-    </style>
 </body>
 </html>
